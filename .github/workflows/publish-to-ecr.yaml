@@ -49,7 +49,7 @@ jobs:
 
       - name: Run Wiz CLI image scan
         id: scan
-        run: ./wizcli docker scan -i $REGISTRY/$REPOSITORY:${COMMIT_SHA} --policy [MZC] CI/CD Image Trust policy
+        run: ./wizcli docker scan -i $REGISTRY/$REPOSITORY:${COMMIT_SHA} --policy "[MZC] CI/CD Image Trust policy"
         continue-on-error: false
         env:
           REGISTRY: ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.us-east-1.amazonaws.com
